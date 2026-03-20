@@ -2,8 +2,10 @@
 
 # libraries and imports
 import requests
+from config import apikeys as cfg
 from github import Github
-from config import apikeys as cfg  
+
+
 
 # Authorise using Personal Access Token 
 apikey = cfg["github"]
