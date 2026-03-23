@@ -1,3 +1,2 @@
-apikeys = {
-    "github": "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"
+apikeys = {    "github": "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"
 }

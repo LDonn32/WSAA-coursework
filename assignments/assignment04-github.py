@@ -12,7 +12,7 @@ auth = Auth.Token(apikey)
 account = Github(auth=auth)
 
 # Connect to repository 
-repo = account.get_repo("LDonn32/WSAA-coursework")
+repo = account.get_repo("LDonn32/-WSAA-coursework")
 
 # modify tthe file
 file_path = "assignments/andrew.txt"  
@@ -23,14 +23,14 @@ response = requests.get(file.download_url)
 contents = response.text
 
 # Replace text locally (case-insensitive)
-updated_contents = re.sub(r'andrew', 'laura', contents, flags=re.IGNORECASE)
+updated_contents = re.sub(r'Andrew', 'Laura', contents, flags=re.IGNORECASE)
 
 # Commit the updated file back to GitHub
 repo.update_file(
     path=file_path,
-    message="Replaced 'andrew' with 'laura' for Assignment 04",
+    message="Replaced 'Andrew' with 'Laura' for Assignment 04",
     content=updated_contents,
     sha=file.sha
 )
 
-print("The name 'andrew' has been replaced with 'laura'.")
+print("The name 'Andrew' has been replaced with 'Laura'.")
