@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>School Database</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>School Database Tester</h1>
+
+<div class="section">
+    <h2>Teachers</h2>
+    <button onclick="loadTeachers()">Load Teachers</button>
+
+    <table id="teacherTable">
+        <thead>
+            <tr>
+                <th>ID</th><th>Name</th><th>Class</th><th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <h3>Add Teacher</h3>
+    <input id="tName" placeholder="Name">
+    <input id="tClass" placeholder="Class Name">
+    <button onclick="addTeacher()">Add</button>
+</div>
+
+<hr>
+
+<div class="section">
+    <h2>Students</h2>
+    <button onclick="loadStudents()">Load Students</button>
+
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>ID</th><th>Name</th><th>Class</th><th>Teacher ID</th><th>Qualification</th><th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <h3>Add Student</h3>
+    <input id="sName" placeholder="Name">
+    <input id="sClass" placeholder="Class Name">
+    <input id="sTeacher" placeholder="Teacher ID">
+    <input id="sQual" placeholder="Qualification Level">
+    <button onclick="addStudent()">Add</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
