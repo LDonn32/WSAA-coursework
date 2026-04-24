@@ -2,7 +2,13 @@ from flask import Flask, jsonify, request, abort
 from teacherDAO import teacherDAO
 from studentDAO import studentDAO
 
-app = Flask(__name__, static_url_path='', static_folder='.')
+
+app = Flask(__name__, static_url_path='', static_folder='static')
+
+@app.route('/')
+def home():
+    return app.send_static_file('index.html')
+
 
 @app.route('/')
 def index():
